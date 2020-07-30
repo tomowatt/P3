@@ -3,6 +3,7 @@ version: '3.8'
 services:
   nginx:
     build: nginx
+    image: p3_nginx
     networks:
       - p3
     ports:
@@ -10,31 +11,37 @@ services:
 
   ballerina:
     build: ballerina
+    image: p3_ballerina
     networks:
       - p3
 
   golang:
     build: golang
+    image: p3_golang
     networks:
       - p3
 
   node:
     build: node
+    image: p3_node
     networks:
       - p3
 
   python:
     build: python
+    image: p3_python
     networks:
       - p3
 
   ruby:
     build: ruby
+    image: p3_ruby
     networks:
       - p3
 
   rust:
     build: rust
+    image: p3_rust
     networks:
       - p3
 
