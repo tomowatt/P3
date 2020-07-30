@@ -1,0 +1,1 @@
+FROM rust:1.45-alpine

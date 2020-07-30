@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: nginx
+    networks:
+      - p3
+    ports:
+      - 80:80
+
+  ballerina:
+    build: ballerina
+    networks:
+      - p3
+
+  golang:
+    build: golang
+    networks:
+      - p3
+
+  node:
+    build: node
+    networks:
+      - p3
+
+  python:
+    build: python
+    networks:
+      - p3
+
+  ruby:
+    build: ruby
+    networks:
+      - p3
+
+  rust:
+    build: rust
+    networks:
+      - p3
+
+networks:
+  p3:

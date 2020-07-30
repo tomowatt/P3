@@ -1,0 +1,1 @@
+FROM ballerina/ballerina:1.2.6
