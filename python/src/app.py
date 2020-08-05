@@ -18,7 +18,8 @@ class PasswordString:
 
     def on_get(self, request, response):
         """Handles GET requests"""
-        response.media = self.get_random_string()
+        data = {"Password": self.get_random_string()}
+        response.media = data
 
 api = falcon.API()
 api.add_route('/', PasswordString())
