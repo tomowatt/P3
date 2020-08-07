@@ -48,13 +48,8 @@ func getRandomString(wordCount int) string {
 
 func onGet(writer http.ResponseWriter, request *http.Request) {
 	var password = RandomPassword{getRandomString(5)}
-	data, error := json.Marshal(password)
-
-	if error != nil {
-		panic(error)
-	}
-
-	fmt.Fprint(writer, string(data))
+	reponse := json.NewEncoder(writer)
+	reponse.Encode(&password)
 }
 
 func main() {
