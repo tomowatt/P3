@@ -1,11 +1,15 @@
 # P3 - Personal Porting Project
 
-A personal project exploring different Programming Languages to implement a small program that does 4 things:
+A personal project exploring different Programming Languages to implement a small program that does 8 things:
 
-* Open a File reading the content
-* Generate a String consisting of Randomly selected Words from the File
+* Open a File
+* Read File contents
+* Put contents into an Array/List/Vector
+* Select N number of items from Array/List/Vector at Random
+* Generate a String from concatenating the Randomly selecting items
 * Host a Web application
-* Return a JSON object on GET requests
+* Create JSON object using Generated String
+* Return JSON object on GET requests
 
 ## Goals
 
