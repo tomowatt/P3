@@ -15,6 +15,12 @@ services:
     networks:
       - p3
 
+  dart:
+    build: dart
+    image: p3_dart
+    networks:
+      - p3
+
   golang:
     build: golang
     image: p3_golang
