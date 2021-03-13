@@ -12,7 +12,7 @@ class PasswordString:
     def get_random_string(self, word_count: int) -> str:
         words = self.get_words()
         random_word_string = '-'
-        random_words = [word for word in random.choices(words, k=word_count)]
+        random_words = list(random.choices(words, k=word_count))
         return random_word_string.join(random_words)
 
     def on_get(self, request, response):
