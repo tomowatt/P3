@@ -2,7 +2,7 @@ require 'sinatra'
 
 
 def get_words 
-  nouns = Array.new
+  nouns = []
   # Open a File
   File.open('nouns.txt', 'r') do |file|
     # Read File contents
@@ -17,7 +17,7 @@ end
 
 def get_random_string (word_count)
   words = get_words()
-  random_words = Array.new
+  random_words = []
   for i in 0..word_count - 1
     # Select N number of items from Array/List/Vector at Random
     random_words.push(words[rand(words.length)])
