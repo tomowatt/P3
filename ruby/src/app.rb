@@ -1,7 +1,7 @@
 require 'sinatra'
 
 
-def get_words ()
+def get_words 
   nouns = Array.new
   # Open a File
   File.open('nouns.txt', 'r') do |file|
@@ -27,7 +27,7 @@ def get_random_string (word_count)
   return random_words_string
 end
 
-def on_get ()
+def on_get 
    # Create JSON object using Generated String
    data = {:Password => get_random_string(5)}
    # Return JSON object on GET requests
