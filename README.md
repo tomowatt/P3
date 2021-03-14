@@ -24,14 +24,14 @@ A personal project exploring different Programming Languages to implement a smal
 * Add Tests
 * Add HTML and CSS to create a UI
 * Document and Host on various Platforms - AWS, Heroku, etc.
-* Minimise Docker Images 
+* Minimise Docker Images
 
-#### Run the applications:
+### Run the applications
 
 `docker-compose up -d`
 
 Then visit **localhost/{language}** in a Browser.
 
-### Stop the applications:
+### Stop the applications
 
 `docker-compose down`
