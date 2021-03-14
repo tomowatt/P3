@@ -1,4 +1,4 @@
-FROM rust:1.45-alpine as builder
+FROM rust:1.50-alpine as builder
 
 WORKDIR /build
 COPY Cargo.toml .
