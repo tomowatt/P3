@@ -3,13 +3,11 @@ FROM golang:1.15-alpine as builder
 WORKDIR /build
 COPY src/app.go .
 
-RUN go build -o app
+RUN CGO_ENABLED=0 GOOS=linux go build -o app
 
-FROM alpine:3.12
+FROM scratch
 
-WORKDIR /app/src
+COPY --from=builder /build/app /
+COPY src/nouns.txt /
 
-COPY --from=builder /build/app .
-COPY src/nouns.txt .
-
-CMD ./app
+CMD [ "/app" ]

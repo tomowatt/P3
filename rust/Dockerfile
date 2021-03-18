@@ -1,18 +1,13 @@
 FROM rust:1.50-alpine as builder
 
 WORKDIR /build
-COPY Cargo.toml .
+COPY . .
 
-WORKDIR /build/src
-COPY src/main.rs .
+RUN cargo build --release
 
-WORKDIR /build
-RUN cargo install --path /build
+FROM scratch
 
-FROM alpine:3.12
+COPY --from=builder /build/target/release/p3rust /
+COPY src/nouns.txt /
 
-WORKDIR /app
-COPY --from=builder /build/target/release/p3rust .
-COPY src/nouns.txt .
-
-CMD ./p3rust
+CMD [ "/p3rust" ]
