@@ -18,7 +18,7 @@ end
 def get_random_string (word_count)
   words = get_words()
   random_words = []
-  for i in 0..word_count - 1
+  for in 0..word_count - 1
     # Select N number of items from Array/List/Vector at Random
     random_words.push(words[rand(words.length)])
   end
