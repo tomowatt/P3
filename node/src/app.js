@@ -7,7 +7,7 @@ const port = 80;
 
 function get_words() {
     var words = [];
-    var file = fs.readFileSync('nouns.txt', 'utf-8').split(/\r?\n/);
+    var file = fs.readFileSync('nouns.txt', 'utf8').split(/\r?\n/);
 
     file.forEach((word) => {
         words.push(word);
