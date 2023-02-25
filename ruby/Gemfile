@@ -1,4 +1,4 @@
 source "https://rubygems.org"  # where gems will be downloaded from
 ruby "2.7.1"
 
-gem 'sinatra', '2.1.0'
+gem 'sinatra', '>=2.2.3'
